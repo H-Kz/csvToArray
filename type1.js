@@ -15,7 +15,6 @@ function csvToArray() {
     //ヘッダー分離
     headers = csvData[0];
     csvData.shift();
-    rows = csvData;
     //空オブジェクト
     obj = [];
     //CSV様式
