@@ -29,6 +29,7 @@ function csvToArray() {
             obj2[headers[count]]=j
             count +=1
         }
+        obj[obj.length]=obj2;
     }
     return obj;
 }
