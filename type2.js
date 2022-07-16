@@ -18,18 +18,17 @@ function csvToArray() {
     //ヘッダーを分離
     headers = csvData[0];
     csvData.shift();
-    rows = csvData;
     //空オブジェクト
     obj = new Object;
     
     //連想配列を作成
     for (const i of csvData) {
-        node_number=i[0];
-        obj[node_number]={};
+        header=i[0];
+        obj[header]={};
         i.shift();
         count=1
         for (const j of i) {
-            obj[node_number][headers[count]]=j
+            obj[header][headers[count]]=j
             count +=1
         }
     }
